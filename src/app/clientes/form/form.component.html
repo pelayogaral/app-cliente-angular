@@ -1,0 +1,69 @@
+<div class="card bg-light">
+  <div class="card-header">
+    {{titulo}}
+  </div>
+  <form (ngSubmit)="create()">
+  <div class="card-body">
+      <div class="form-group row">
+        <label for="nombre" class="col-form-label col-sm-2">Nombre</label>
+        <div class="col-sm-6">
+          <input
+          type="text"
+          name="nombre"
+          [(ngModel)]="cliente.nombre"
+          class="form-control"
+          placeholder="Introduzca su nombre"
+          required ="true">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="apellido" class="col-form-label col-sm-2">Apellido</label>
+        <div class="col-sm-6">
+          <input
+          type="text"
+          name="apellido"
+          [(ngModel)]="cliente.apellido"
+          class="form-control"
+          placeholder="Introduzca su apellido">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="email" class="col-form-label col-sm-2">Email</label>
+        <div class="col-sm-6">
+          <input
+          type="email"
+          name="email"
+          [(ngModel)]="cliente.email"
+          class="form-control"
+          placeholder="Introduzca su email"
+          required="true">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="telefono" class="col-form-label col-sm-2">Telefono</label>
+        <div class="col-sm-6">
+          <input
+          type="number"
+          name="telefono"
+          [(ngModel)]="cliente.telefono"
+          class="form-control"
+          placeholder="Introduzca su telefono">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="createdAt" class="col-form-label col-sm-2">Fecha</label>
+        <div class="col-sm-6">
+          <input
+          type="date"
+          name="createdAt"
+          [(ngModel)]="cliente.createdAt"
+          class="form-control">
+        </div>
+      </div>
+    </div>
+<div class="card-footer">
+  <button class="btn btn-primary" type="submit">Crear</button>
+</div>
+
+</form>
+</div>
